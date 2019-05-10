@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { Routes, Router } from '@angular/router';
+import { Routes, Router,RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DataService } from './services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoginGuard } from './guards/login.guard';
-
+import { FormsModule } from '@angular/forms';
+import { AnswerTableComponent } from './pages/answer-table/answer-table.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -53,6 +54,10 @@ export const routes: Routes = [
   { 
     path: '', 
     component: MainComponent 
+  },
+  { 
+    path: 'home', 
+    component: AnswerTableComponent 
   },
   { 
     path: 'about', 

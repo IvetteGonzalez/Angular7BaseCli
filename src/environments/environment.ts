@@ -32,8 +32,9 @@ export const DIALOG_TITLES = {
 }
 
 export const PATH_FINNING = {
-  DOMAIN: 'http://localhost:8092',
-  GET_INFO:'',
+ // http://localhost:3021/api/QuestionAnswer
+  DOMAIN: 'http://localhost:3021',
+  GET_INFO:'/api/QuestionAnswer',
   SET_EDIT:'',
   SET_DELETE:''
 }

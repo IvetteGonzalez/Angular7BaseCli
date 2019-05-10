@@ -38,6 +38,7 @@ export class InfoTableComponent implements OnInit {
 
   ngOnInit() {
     this.displayedColumns.push("edit","remove");
+    console.log('info ta', this.dataSourceTable);
   }
 
   ngAfterContentInit(){}
