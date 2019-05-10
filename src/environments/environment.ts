@@ -30,3 +30,10 @@ export const routesWeb = {
 export const DIALOG_TITLES = {
   LOGOUT:'¿Deseas cerrar sesión?'
 }
+
+export const PATH_FINNING = {
+  DOMAIN: 'http://localhost:8092',
+  GET_INFO:'',
+  SET_EDIT:'',
+  SET_DELETE:''
+}

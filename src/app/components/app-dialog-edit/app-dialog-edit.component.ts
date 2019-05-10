@@ -21,8 +21,9 @@ export class AppDialogEditComponent implements OnInit {
    ) {
       console.log("data",data.answer);
       console.log("data 2",data.questions);
-      this.question = data.questions;
-      this.answer = data.answer;
+      //this.question = data.questions;
+      //this.answer = data.answer;
+      this.answer = data;
   }
 
   ngOnInit() {      
@@ -31,7 +32,7 @@ export class AppDialogEditComponent implements OnInit {
   
 
 addTodo(event){
-    console.log('guardas',event);
+    console.log('guardas I',event);
   }
 
 }

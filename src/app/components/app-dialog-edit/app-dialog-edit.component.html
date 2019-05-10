@@ -3,8 +3,8 @@
     <mat-dialog-content class="mat-typography">
       <h3>Preguntas: </h3>
       <div>
-          <li *ngFor="let questions of question">
-              <textarea style="width: 800px" placeholder="Preguntas" (ngModel)="questions" >{{questions}}</textarea>
+          <li *ngFor="let question of data.questions; let i = index" >
+              <textarea style="width: 800px" placeholder="Preguntas" [(ngModel)]="data.questions[i]" >{{question}}</textarea>
           </li>
       </div>
     </mat-dialog-content>
@@ -12,14 +12,14 @@
     <mat-dialog-content class="mat-typography">
       <h3>Respuestas: </h3>
       <div>
-          <li *ngFor="let ans of answer">
-            <textarea style="width: 800px" matInput placeholder="Respuestas" [(ngModel)]="ans">{{ ans }}</textarea> 
+          <li *ngFor="let ans of data.answer: let i = index">
+            <textarea style="width: 800px" matInput placeholder="Respuestas" [(ngModel)]="data.answer[i]">{{ ans }}</textarea> 
           </li> 
       </div>
     </mat-dialog-content>
 
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close >Cancel</button>
-      <button mat-button [mat-dialog-close]="true" addTodo="question.questions">Guardar</button>
+      <button mat-button [mat-dialog-close]="true" (click)="addTodo(data)">Guardar</button>
     </mat-dialog-actions>
 </div>
