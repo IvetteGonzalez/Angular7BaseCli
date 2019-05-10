@@ -2,7 +2,7 @@
     background-image: url('/assets/background.png');
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 55px;
     min-width: 1182px;
 }
 
@@ -31,16 +31,11 @@
     margin-top: 15px;
 }
 
-.divimage{
-    margin-left: -2em;
-    background-image: url('/assets/BandaBlancaCurva.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-}
+
 
 .image-header {
-    width: 208px;
-    height: 46px;
+    width: 90%;
+    height: 90%;
     position: relative;
     left: -12px;
 }

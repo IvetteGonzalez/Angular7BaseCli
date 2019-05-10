@@ -54,11 +54,8 @@ export class AnswerTableComponent implements OnInit {
 
   getInfo(){
     let url =`${PATH_FINNING.DOMAIN}/${PATH_FINNING.GET_INFO}`
-    //return this.http.get();
-    
-        
+    //return this.http.get();       
     return this.info;
-
   }
 
 
