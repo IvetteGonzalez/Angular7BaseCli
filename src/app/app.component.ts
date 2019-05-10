@@ -16,6 +16,15 @@ export class AppComponent {
   title = 'app';
   isLoading = false;
   isLogged = false;
+
+  tableData:any = {
+    headers:["id", "answer", "source", "question", "opcion"],
+    infoData: ["id:1"],
+    tabs: [],
+    titles:["ID", "Respuestas", "Codigo", "Pregunta", "Opcion"]
+};
+
+
   constructor(private _dataService: DataService, private _snackBar: MatSnackBar, private router: Router){
     this.isLogged = this._dataService.isLogged;
     this._dataService
