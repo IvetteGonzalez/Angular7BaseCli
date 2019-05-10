@@ -12,7 +12,7 @@
     <mat-dialog-content class="mat-typography">
       <h3>Respuestas: </h3>
       <div>
-          <li *ngFor="let ans of data.answer: let i = index">
+          <li *ngFor="let ans of data.answer; let i = index">
             <textarea style="width: 800px" matInput placeholder="Respuestas" [(ngModel)]="data.answer[i]">{{ ans }}</textarea> 
           </li> 
       </div>
