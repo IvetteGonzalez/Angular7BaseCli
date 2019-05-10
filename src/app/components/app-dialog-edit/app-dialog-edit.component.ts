@@ -11,21 +11,27 @@ export class AppDialogEditComponent implements OnInit {
 
  
   filter:string;
-  inputs:any[] = [];
-  question:any[] = [];
+  inputs:any[];
+  question: any[];
   idsInputs:any[]=[];
-  
+  answer:any[];
+
   constructor(
-    private _dataService: DataService,
     @Inject(MAT_DIALOG_DATA) public data: any,
    ) {
-      this.inputs=data.answer;
-      this.question = data.questions;             
+      console.log("data",data.answer);
+      console.log("data 2",data.questions);
+      this.question = data.questions;
+      this.answer = data.answer;
   }
 
   ngOnInit() {      
    
   }
   
+
+addTodo(event){
+    console.log('guardas',event);
+  }
 
 }

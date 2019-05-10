@@ -7,3 +7,11 @@
     color:black;
     background: #FFC700;
 }
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}

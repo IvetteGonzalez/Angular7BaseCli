@@ -1,13 +1,11 @@
 import { Component, OnInit ,EventEmitter,Input,Output} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DialogConfirmComponent } from '../../components/dialog-confirm/dialog-confirm.component';
 import { MatDialogConfig, MatDialog } from '@angular/material';
-import { AppDialogNewItemComponent } from '../../components/app-dialog-new-item/app-dialog-new-item.component';
 import { AppDialogContenComponent } from '../../components/app-dialog-conten/app-dialog-conten.component';
 import { AppDialogEditComponent } from '../../components/app-dialog-edit/app-dialog-edit.component';
 
 
-const dialogConfig = new MatDialogConfig();
+
 
 @Component({
   selector: 'app-info-table',
@@ -27,7 +25,7 @@ export class InfoTableComponent implements OnInit {
   columns:string[] = ["id", "answer", "source", "questions"];
   answerArray:string[];
   questionArray:string[];
-  
+  instructions = [];
 
   constructor( private route: ActivatedRoute,
                private _router: Router, 
@@ -49,27 +47,21 @@ export class InfoTableComponent implements OnInit {
   }
 
   editRow(event){
-    console.log("answer",event.answer);
-    console.log("question",event.question);
-
-    const dialogRef = this.dialog.open(AppDialogEditComponent,{
-      data:{answer:event.answer,question:event.question},
+    const dialogRef = this.dialog.open(AppDialogEditComponent,{ 
+      data : event,
     });
-
-
     dialogRef.afterClosed().subscribe(result => {
-    console.log(`Dialog result: ${result}`);
+         console.log(`Dialog result: ${result}`);
+         if(result){
+          console.log(`Gurda: ${event.answer}`);
+        }
     });
   }
 
   deleteRow(event){
-   
     const dialogRef = this.dialog.open(AppDialogContenComponent);
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result delete: ${result}`);
-      
-      
-
     });
   }
 }

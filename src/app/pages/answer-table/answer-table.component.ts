@@ -16,7 +16,7 @@ export class AnswerTableComponent implements OnInit {
     infoData:[
         {
             "id": 1,
-            "answer": "La creación de una experiencia conversacional de alta calidad requiere un conjunto fundacional de capacidades. Para ello, hemos tenido éxito con la creación de grandes experiencias conversacionales, hemos creado una plantilla ** Enterprise bot template **. Esta plantilla reúne todas las mejores prácticas y los componentes del apoyo que hemos logrado a través de la construcción de experiencias conversacionales. \\ N [Obtenga más información] bot-builder-enterprise-template-overview? view = azure-bot-service-4.0)",
+            "answer":["La creación de una experiencia conversacional de alta calidad requiere un conjunto fundacional de capacidades,La creación de una experiencia conversacional de alta calidad requiere un conjunto fundacional de capacidades"],
             "source": "custom editorial",
             "questions": [
                 "¿Qué es el Enterprise bot template?",
