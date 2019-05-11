@@ -8,7 +8,7 @@
         <th mat-header-cell *matHeaderCellDef> {{ displayTitles[i] }} </th>
         <td mat-cell *matCellDef="let element"  
             [matTooltip]="element[column] != null && element[column].length > 20 ? element[column] : ''">
-            {{element[column] | reducer:10}}
+            {{element[column] | reducer:30}}
         </td>
       </div>
     </ng-container>
@@ -37,7 +37,9 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let dataSource; columns: displayedColumns;" (click)="selectedItem(dataSource)" 
-    style="cursor: pointer;" [ngClass]="{'make-gold': (dataSource.id%2?1:2)==1}"></tr>
+    style="cursor: pointer;" [ngClass]="{'make-gold': (dataSource.id%2?1:2)==1}"
+    
+    ></tr>
    
   </table>
 </div>

@@ -16,14 +16,15 @@ export class AppDialogEditComponent implements OnInit {
   idsInputs:any[]=[];
   answer:any[];
 
+  data1:any;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
    ) {
       console.log("data",data.answer);
       console.log("data 2",data.questions);
-      //this.question = data.questions;
-      //this.answer = data.answer;
-      this.answer = data;
+      data.answer = [data.answer];
+
   }
 
   ngOnInit() {      
