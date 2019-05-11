@@ -9,6 +9,7 @@ import { catchError, map } from 'rxjs/operators';
 export class ConsumeService {
 
   private _url: string = 'http://api.icndb.com/jokes/random';
+  private _urlQuestion = 'http://localhost:3021/api/QuestionAnswer';
   constructor(private _http: HttpClient) { }
 
   getJoke():Observable<any> {
@@ -16,6 +17,14 @@ export class ConsumeService {
         .get(this._url, {responseType: 'json'})
         .pipe(catchError(this.handleError));
   }
+
+  getQuestionAnswer():Observable<any> {
+    return this._http
+        .get(this._url, {responseType: 'json'})
+        .pipe(catchError(this.handleError));
+  }
+
+
 
   handleError(error: any) {
       console.log(error);
